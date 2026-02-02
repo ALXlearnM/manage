@@ -3,176 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GTA VI | Todo lo que se viene</title>
+    <title>RAGE Engine Evolution | De GTA IV a GTA VI</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --neon-pink: #ff00ff;
-            --neon-blue: #00ffff;
-            --dark-bg: #0a0a0a;
-            --text-gray: #cccccc;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --primary: #f8ca11; /* Amarillo Rockstar */
+            --bg: #0b0b0b;
+            --card-bg: #1a1a1a;
+            --text: #ffffff;
+            --accent: #e61e26;
         }
 
         body {
-            background-color: var(--dark-bg);
-            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        /* Estilo del Header */
         header {
-            height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/GTAVI.jpg');
-            background-size: cover;
-            background-position: center;
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&q=80') center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            border-bottom: 5px solid var(--neon-pink);
+            border-bottom: 5px solid var(--primary);
         }
 
-        h1 {
-            font-size: 5rem;
-            text-transform: uppercase;
-            letter-spacing: 10px;
-            text-shadow: 0 0 20px var(--neon-pink);
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 1.5rem;
-            color: var(--neon-blue);
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-
-        /* Secciones */
         .container {
             max-width: 1100px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: var(--neon-pink);
-            text-transform: uppercase;
+            margin: auto;
+            padding: 20px;
         }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            gap: 25px;
+            margin-top: 40px;
         }
 
         .card {
-            background: #1a1a1a;
-            padding: 30px;
+            background: var(--card-bg);
+            padding: 25px;
             border-radius: 10px;
-            border-left: 4px solid var(--neon-blue);
-            transition: transform 0.3s ease;
+            border-left: 4px solid var(--primary);
+            transition: transform 0.3s;
         }
 
         .card:hover {
             transform: translateY(-10px);
-            background: #252525;
         }
 
-        .card h3 {
-            margin-bottom: 15px;
-            color: var(--neon-blue);
+        h1 { font-size: 3.5rem; margin-bottom: 0; color: var(--primary); }
+        h2 { color: var(--primary); border-bottom: 2px solid #333; padding-bottom: 10px; }
+        
+        .badge {
+            background: var(--accent);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
         }
 
-        /* Detalles Técnicos - Tu toque de Ingeniero */
-        .specs {
-            background: #111;
-            padding: 40px;
-            border-radius: 15px;
-            margin-top: 50px;
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: var(--card-bg);
         }
 
-        .specs ul {
-            list-style: none;
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
         }
 
-        .specs li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-
-        .specs li::before {
-            content: "➤";
-            color: var(--neon-pink);
-            margin-right: 10px;
-        }
+        .highlight { color: var(--primary); font-weight: bold; }
 
         footer {
             text-align: center;
-            padding: 40px;
-            font-size: 0.9rem;
-            color: var(--text-gray);
-            border-top: 1px solid #333;
-        }
-
-        .highlight {
-            color: var(--neon-pink);
-            font-weight: bold;
+            padding: 50px;
+            background: #000;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>GTA VI</h1>
-        <p class="subtitle">Regresando a Leonida</p>
-    </header>
+<header>
+    <h1>RAGE ENGINE</h1>
+    <p>El motor que cambió la historia del gaming: De 2008 a 2026</p>
+</header>
 
-    <div class="container">
-        <h2 class="section-title">Lo que sabemos hasta ahora</h2>
+<div class="container">
+    
+    <section>
+        <h2><i class="fas fa-history"></i> Retrospectiva: Los Cimientos</h2>
+        <p>El Rockstar Advanced Game Engine (RAGE) no es solo un motor gráfico, es un ecosistema que gestiona físicas, IA y clima de forma integrada.</p>
         
         <div class="grid">
             <div class="card">
-                <h3>Dualidad de Protagonistas</h3>
-                <p>Conoceremos la historia de <span class="highlight">Lucia y Jason</span>, una pareja inspirada en Bonnie & Clyde, marcando la primera vez que tendremos una protagonista femenina en la era 3D.</p>
+                <span class="badge">RAGE 7 (2008-2013)</span>
+                <h3>GTA IV & Max Payne 3</h3>
+                <p>Introdujo la integración con <strong>Euphoria Physics</strong>. Los personajes reaccionaban al impacto de forma orgánica, no con animaciones pre-grabadas.</p>
             </div>
             <div class="card">
-                <h3>El Estado de Leonida</h3>
-                <p>No es solo Vice City; el mapa abarcará el estado completo de <span class="highlight">Leonida</span>, incluyendo zonas rurales, pantanos y playas vibrantes con un nivel de detalle nunca antes visto.</p>
+                <span class="badge">RAGE 8 (2018)</span>
+                <h3>Red Dead Redemption 2</h3>
+                <p>El pico actual. Iluminación volumétrica, nieve dinámica y una IA de NPCs con rutinas de 24 horas. Marcó el estándar del fotorrealismo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="margin-top: 60px;">
+        <h2><i class="fas fa-rocket"></i> El Salto a RAGE 9 (GTA VI)</h2>
+        <p>Los rumores y filtraciones técnicas indican que GTA VI utilizará la versión más ambiciosa del motor hasta la fecha.</p>
+        
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Característica</th>
+                    <th>RAGE 8 (RDR2)</th>
+                    <th>RAGE 9 (GTA VI - Probable)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Físicas de Agua</td>
+                    <td>Simulación básica de flujo.</td>
+                    <td><span class="highlight">Simulación en tiempo real</span> (tipo surf) y corrientes físicas.</td>
+                </tr>
+                <tr>
+                    <td>Iluminación</td>
+                    <td>Pre-calculada en interiores.</td>
+                    <td><span class="highlight">Ray Tracing Global</span> completo y reflejos dinámicos.</td>
+                </tr>
+                <tr>
+                    <td>IA de Tráfico</td>
+                    <td>Rutas predefinidas.</td>
+                    <td>Navegación basada en <span class="highlight">Machine Learning</span> para evitar atascos lógicos.</td>
+                </tr>
+                <tr>
+                    <td>Interiores</td>
+                    <td>Carga limitada (Instanciado).</td>
+                    <td>Más del <span class="highlight">70% de edificios explorables</span> sin pantallas de carga.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section style="margin-top: 60px;">
+        <h2><i class="fas fa-eye"></i> Visión GTA VI: ¿Qué esperar?</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-wind fa-2x" style="color:var(--primary)"></i>
+                <h3>Clima Extremo</h3>
+                <p>Huracanes e inundaciones reales que afectan la conducción y la estructura de la ciudad en Vice City.</p>
             </div>
             <div class="card">
-                <h3>Ecosistema Vivo</h3>
-                <p>Rockstar promete una IA revolucionaria donde los NPCs tendrán rutinas complejas y una integración masiva con redes sociales dentro del juego.</p>
+                <i class="fas fa-user-friends fa-2x" style="color:var(--primary)"></i>
+                <h3>Interacción Social</h3>
+                <p>Sistema de redes sociales integrado donde las acciones del jugador se vuelven virales en el juego.</p>
             </div>
         </div>
+    </section>
 
-        <div class="specs">
-            <h2 class="section-title">Detalles Técnicos & Lanzamiento</h2>
-            <ul>
-                <li><strong>Ventana de Lanzamiento:</strong> Otoño de 2025 (Confirmado por Take-Two).</li>
-                <li><strong>Plataformas Iniciales:</strong> PlayStation 5 y Xbox Series X/S.</li>
-                <li><strong>Motor Gráfico:</strong> RAGE Engine 9 (Renderizado de agua y físicas avanzadas).</li>
-                <li><strong>Inmersión:</strong> Sistema dinámico de clima y crecimiento de vegetación en tiempo real.</li>
-            </ul>
-        </div>
-    </div>
+</div>
 
-    <footer>
-        <p>Página diseñada para fines informativos sobre el lanzamiento más esperado de la década.</p>
-        <p>&copy; 2026 - Actualidad Tecnológica</p>
-    </footer>
+<footer>
+    <p>&copy; 2026 - Análisis Técnico de Motores Gráficos | Creado para el futuro del Gaming</p>
+</footer>
 
 </body>
 </html>
