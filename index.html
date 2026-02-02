@@ -1,1 +1,178 @@
-<h1>Hola Mundo</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA VI | Todo lo que se viene</title>
+    <style>
+        :root {
+            --neon-pink: #ff00ff;
+            --neon-blue: #00ffff;
+            --dark-bg: #0a0a0a;
+            --text-gray: #cccccc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Estilo del Header */
+        header {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/GTAVI.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 5px solid var(--neon-pink);
+        }
+
+        h1 {
+            font-size: 5rem;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            text-shadow: 0 0 20px var(--neon-pink);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--neon-blue);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Secciones */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--neon-pink);
+            text-transform: uppercase;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid var(--neon-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: #252525;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--neon-blue);
+        }
+
+        /* Detalles Técnicos - Tu toque de Ingeniero */
+        .specs {
+            background: #111;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 50px;
+        }
+
+        .specs ul {
+            list-style: none;
+        }
+
+        .specs li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .specs li::before {
+            content: "➤";
+            color: var(--neon-pink);
+            margin-right: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            border-top: 1px solid #333;
+        }
+
+        .highlight {
+            color: var(--neon-pink);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>GTA VI</h1>
+        <p class="subtitle">Regresando a Leonida</p>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Lo que sabemos hasta ahora</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Dualidad de Protagonistas</h3>
+                <p>Conoceremos la historia de <span class="highlight">Lucia y Jason</span>, una pareja inspirada en Bonnie & Clyde, marcando la primera vez que tendremos una protagonista femenina en la era 3D.</p>
+            </div>
+            <div class="card">
+                <h3>El Estado de Leonida</h3>
+                <p>No es solo Vice City; el mapa abarcará el estado completo de <span class="highlight">Leonida</span>, incluyendo zonas rurales, pantanos y playas vibrantes con un nivel de detalle nunca antes visto.</p>
+            </div>
+            <div class="card">
+                <h3>Ecosistema Vivo</h3>
+                <p>Rockstar promete una IA revolucionaria donde los NPCs tendrán rutinas complejas y una integración masiva con redes sociales dentro del juego.</p>
+            </div>
+        </div>
+
+        <div class="specs">
+            <h2 class="section-title">Detalles Técnicos & Lanzamiento</h2>
+            <ul>
+                <li><strong>Ventana de Lanzamiento:</strong> Otoño de 2025 (Confirmado por Take-Two).</li>
+                <li><strong>Plataformas Iniciales:</strong> PlayStation 5 y Xbox Series X/S.</li>
+                <li><strong>Motor Gráfico:</strong> RAGE Engine 9 (Renderizado de agua y físicas avanzadas).</li>
+                <li><strong>Inmersión:</strong> Sistema dinámico de clima y crecimiento de vegetación en tiempo real.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Página diseñada para fines informativos sobre el lanzamiento más esperado de la década.</p>
+        <p>&copy; 2026 - Actualidad Tecnológica</p>
+    </footer>
+
+</body>
+</html>
